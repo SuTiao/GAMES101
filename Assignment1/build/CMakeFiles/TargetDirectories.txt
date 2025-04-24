@@ -1,0 +1,3 @@
+D:/GAMES101/Assignment1/build/CMakeFiles/Rasterizer.dir
+D:/GAMES101/Assignment1/build/CMakeFiles/ALL_BUILD.dir
+D:/GAMES101/Assignment1/build/CMakeFiles/ZERO_CHECK.dir

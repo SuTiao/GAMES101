@@ -1,0 +1,8 @@
+{
+    "version": "0.2.0",
+"cmake.sourceDirectory": "D:/GAMES101/Assignment1/code",
+"cmake.generator": "Visual Studio 17 2022",
+  "cmake.configureSettings": {
+    "CMAKE_GENERATOR": "Visual Studio 17 2022"
+  }
+}
