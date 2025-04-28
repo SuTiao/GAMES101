@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+"cmake.sourceDirectory": "D:/GAMES101/Assignment2/code",
+"cmake.generator": "Visual Studio 17 2022",
+  "cmake.configureSettings": {
+    "CMAKE_GENERATOR": "Visual Studio 17 2022"
+  },
+  "files.associations": {
+    "alignedvector3": "cpp",
+    "fft": "cpp",
+    "*.expression": "cpp",
+    "core": "cpp",
+    "superlusupport": "cpp",
+    "adolcforward": "cpp",
+    "autodiff": "cpp",
+    "bvh": "cpp",
+    "eulerangles": "cpp",
+    "kroneckerproduct": "cpp",
+    "mprealsupport": "cpp",
+    "numericaldiff": "cpp",
+    "openglsupport": "cpp",
+    "specialfunctions": "cpp",
+    "splines": "cpp",
+    "*.evaluator": "cpp",
+    "*.traits": "cpp"
+  }
+}

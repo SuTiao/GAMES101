@@ -1,0 +1,10 @@
+^D:\GAMES101\ASSIGNMENT2\BUILD\CMAKEFILES\3C68A72FB1EF37C82EB8653B68091A5F\GENERATE.STAMP.RULE
+setlocal
+D:\Cmake\bin\cmake.exe -SD:/GAMES101/Assignment2/code -BD:/GAMES101/Assignment2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/GAMES101/Assignment2/build/Rasterizer.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

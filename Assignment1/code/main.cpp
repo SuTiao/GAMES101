@@ -31,6 +31,45 @@ Eigen::Matrix4f get_model_matrix(float rotation_angle)
     return model;
 }
 
+//绕任意轴旋转
+Eigen::Matrix4f get_axis_model_matrix(float rotation_angle, Eigen::Vector3f axis, Eigen::Vector3f point){
+    float angle = rotation_angle * MY_PI / 180.0f;
+    Eigen::Matrix3f N = Eigen::Matrix3f::Identity();
+
+    Eigen::Matrix4f moveToOrigin = Eigen::Matrix4f::Identity();
+
+    moveToOrigin << 1, 0, 0, -point.x(),
+                    0, 1, 0, -point.y(),
+                    0, 0, 1, -point.z(),
+                    0, 0, 0, 1;
+
+    Eigen::Matrix4f moveBack = Eigen::Matrix4f::Identity();
+
+    moveBack << 1, 0, 0, point.x(),
+                0, 1, 0, point.y(),
+                0, 0, 1, point.z(),
+                0, 0, 0, 1;
+
+
+    N << 0, -axis.z(), axis.y(),
+         axis.z(), 0, -axis.x(),
+         -axis.y(), axis.x(), 0;
+
+    Eigen::Matrix3f rotate = std::cos(angle) * Eigen::Matrix3f::Identity() + (1- std::cos(angle)) * axis * axis.transpose() + std::sin(angle) * N;
+
+    Eigen::Matrix4f model = Eigen::Matrix4f::Identity();
+
+    model << rotate(0, 0), rotate(0, 1), rotate(0, 2), 0,
+             rotate(1, 0), rotate(1, 1), rotate(1, 2), 0,
+             rotate(2, 0), rotate(2, 1), rotate(2, 2), 0,
+             0, 0, 0, 1;
+    
+    model = moveBack * model * moveToOrigin;
+
+    return model;
+}
+
+
 Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
                                       float zNear, float zFar)
 {

@@ -1,8 +1,9 @@
 ﻿  Building Custom Rule D:/GAMES101/Assignment1/code/CMakeLists.txt
   main.cpp
 D:\GAMES101\Assignment1\code\main.cpp(25,17): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-D:\GAMES101\Assignment1\code\main.cpp(96,55): warning C4305: “参数”: 从“double”到“float”截断
-D:\GAMES101\Assignment1\code\main.cpp(112,55): warning C4305: “参数”: 从“double”到“float”截断
+D:\GAMES101\Assignment1\code\main.cpp(36,17): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\GAMES101\Assignment1\code\main.cpp(135,55): warning C4305: “参数”: 从“double”到“float”截断
+D:\GAMES101\Assignment1\code\main.cpp(151,55): warning C4305: “参数”: 从“double”到“float”截断
   rasterizer.cpp
 D:\GAMES101\Assignment1\code\rasterizer.cpp(41,10): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
 D:\GAMES101\Assignment1\code\rasterizer.cpp(42,10): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
